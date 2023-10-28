@@ -6,52 +6,62 @@ const images = [
   {
     name: "Pinky",
     description: "butterfly flower looking ",
+    instock: 1,
     src: ["./assets/40a.png", "./assets/40b.png"],
   },
   {
     name: "Sea bird",
+    instock: 1,
     description: "Sea bird for sea lovers.",
     src: ["./assets/41a.png", "./assets/41b.png"],
   },
 
   {
     name: "Starfish",
+    instock: 2,
     description: "starfish with pearls and stones .",
     src: ["./assets/37a.png", "./assets/37a.png"],
   },
   {
     name: "Rainbow star",
+    instock: 1,
     description: "rainbow star with sparkly finish.",
     src: ["./assets/38b.png"],
   },
   {
     name: "Strawberry",
+    instock: 1,
     description: "summary strawberry with pink stones.",
     src: ["./assets/36a.png", "./assets/36b.png"],
   },
   {
     name: "Great green ",
+    instock: 1,
     description: "bright green color to lighten up your day.",
     src: ["./assets/39a.png", "./assets/39b.png"],
   },
 
   {
     name: "Rainbow Strap",
+    instock: 1,
     description: "Rainbow starp that you can style as you want.",
     src: ["./assets/42a.png", "./assets/42a.png"],
   },
   {
     name: "Blue eyes",
+    instock: 0,
     description: "Ocean blue eyes, look into mine.",
     src: ["./assets/43a.png"],
   },
   {
     name: "dog lover",
+    instock: 1,
     description: "take your pair of dogs for a walk.",
     src: ["./assets/44b.png"],
   },
   {
     name: "Green Strap",
+    instock: 1,
     description: "wiggly string earring that you can style as you want.",
     src: ["./assets/34a.png", "./assets/34b.png"],
   },
@@ -72,6 +82,7 @@ console.log(images[0].src);
           return (
             <Card
               name={image.name}
+              instock={image.instock}
               description={image.description}
               src={image.src[0]}
             />

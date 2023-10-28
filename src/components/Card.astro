@@ -4,24 +4,26 @@ import { Image } from "astro:assets";
 
 interface Props {
   name: string;
+  instock: number;
   description: string;
   src: string;
 }
 
-const { name, description, src } = Astro.props;
+const { name, instock, description, src } = Astro.props;
 ---
 
 <li class="bg-white p-4 rounded text-black">
-  <h2>
+  <h2 class="item-name">
     {name}
   </h2>
-  <p>
+  <span class="item-stock">{instock} available</span>
+  <img class="item-img" src={src} />
+  <p class="item-description">
     {description}
   </p>
-  <img src={src} />
-  <!-- <slot /> -->
 </li>
 
+<!-- 
 <style>
   .link-card {
     list-style: none;
@@ -61,4 +63,4 @@ const { name, description, src } = Astro.props;
   .link-card:is(:hover, :focus-within) h2 {
     color: rgb(var(--accent-light));
   }
-</style>
+</style> -->
