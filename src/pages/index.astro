@@ -54,16 +54,22 @@ const images = [
     src: ["./assets/43a.png"],
   },
   {
-    name: "dog lover",
-    instock: 1,
-    description: "take your pair of dogs for a walk.",
-    src: ["./assets/44b.png"],
+    name: "cheers",
+    instock: 4,
+    description: "Save water, drink beer.",
+    src: ["./assets/beer1.png"],
   },
   {
-    name: "Green Strap",
-    instock: 1,
-    description: "wiggly string earring that you can style as you want.",
-    src: ["./assets/34a.png", "./assets/34b.png"],
+    name: "Merry Christmas",
+    instock: 4,
+    description: "so have yourself a merry little christmas.",
+    src: ["./assets/tree1.png"],
+  },
+  {
+    name: "Coo",
+    instock: 2,
+    description: "You are so coo.",
+    src: ["./assets/cow1.png"],
   },
 ];
 
@@ -72,9 +78,6 @@ console.log(images[0].src);
 
 <Layout title="knitted love.">
   <main>
-    <!-- header wicth name, gallary and about -->
-    <h1><span class="text-gradient">Knitted Love</span></h1>
-
     <!-- cards with images -->
     <ul role="list" class="cards">
       {
@@ -99,7 +102,7 @@ console.log(images[0].src);
     padding: 1rem;
     width: auto;
     max-width: calc(100% - 2rem);
-    background-color: pink;
+    background-color: #efd3c4;
     font-size: 20px;
     line-height: 1.6;
   }
@@ -110,13 +113,6 @@ console.log(images[0].src);
     line-height: 1;
     text-align: center;
     margin-bottom: 1em;
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
   }
 
   .cards {
