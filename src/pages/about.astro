@@ -5,22 +5,68 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="about">
   <main>
-    <div>
-      <p>
-        I am currently working on my personal website in order to test out ideas
-        for a Code Jam. I am adding this now page, images, styles, animation and
-        content. Check back for more soon.
-      </p>
+    <div class="font-extralight font-weight: 300;">
+      <div class="qa-pair">
+        <p>Q: Who are you?</p>
+        <p>
+          A: I am a software development graduate from Codeclan. My hobby is
+          coding and knitting. I have noticed that the biggest similarity
+          between coding and knitting is that no matter how beautiful it looks
+          like, the back-end can be messy. Sorry about my dry humor, but I know
+          that with time and patience, they can both be a piece of art.
+        </p>
+      </div>
+
+      <div class="qa-pair">
+        <p>Q: What is this website about?</p>
+        <p>
+          A: I made this website because I want to introduce these pretty
+          knitted earrings to the UK market (as well as practicing my coding
+          ability).
+        </p>
+      </div>
+
+      <!-- Repeat the above structure for each Q&A pair -->
+
+      <div class="qa-pair">
+        <p>Q: Can I know more about you?</p>
+        <p>
+          A: Of course.
+          <div class="contact-group">
+            <p class="contact">
+              My LinkedIn: <a
+                href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADy_UQ0BtKntH0mWZKQ7QTdaFH_Qag0dudk&keywords=zhu%20m%20scott&origin=RICH_QUERY_SUGGESTION&position=0&searchId=341bf772-bc1e-4c9d-8832-1f2ec6ef4e30&sid=%3AAv&spellCorrectionEnabled=false"
+                ><span class="underline inline">Zhu M Scott</span></a
+              >
+            </p>
+
+            <p class="contact">
+              YouTube: <a
+                href="https://www.youtube.com/channel/UCfQ43uCdxRQ785XS7c_6m5w"
+                ><span class="underline inline">Zhu M Scott</span></a
+              >
+            </p>
+            <p class="contact">My Instagram: zhumeng1215</p>
+            <p class="contact">Email: zhume2224@outlook.com</p>
+          </div>
+        </p>
+      </div>
     </div>
   </main>
-</Layout>
 
-<style>
-  main {
-    font-size: 20px;
-    padding-top: 5rem;
-    padding-left: 8rem;
-    padding-right: 8rem;
-    height: 80vh;
-  }
-</style>
+  <style>
+    main {
+      font-size: 20px;
+      padding-top: 5rem;
+      padding-left: 8rem;
+      padding-right: 8rem;
+      height: 80vh;
+    }
+    .qa-pair {
+      padding-bottom: 2rem;
+    }
+    .contact-group {
+      padding-left: 1rem;
+    }
+  </style>
+</Layout>
