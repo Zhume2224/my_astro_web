@@ -32,6 +32,10 @@ const { name, instock, description, src } = Astro.props;
     vertical-align: middle;
   }
   .item-stock {
-    padding-left: 170px;
+    display: flex;
+    justify-content: end;
+  }
+  .item-stock span {
+    padding-left: 5px;
   }
 </style>
