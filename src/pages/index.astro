@@ -4,6 +4,30 @@ import Card from "../components/Card.astro";
 
 const images = [
   {
+    name: "cheers",
+    instock: 4,
+    description: "Save water, drink beer.",
+    src: ["./assets/beer1.png"],
+  },
+  {
+    name: "Merry Christmas",
+    instock: 4,
+    description: "So have yourself a merry little christmas.",
+    src: ["./assets/tree1.png"],
+  },
+  {
+    name: "Coo",
+    instock: 2,
+    description: "You are so coo.",
+    src: ["./assets/cow1.png"],
+  },
+  {
+    name: "Smile",
+    instock: 0,
+    description: "One smile a day, keeps doctor away.",
+    src: ["./assets/p15.png"],
+  },
+  {
     name: "Pinky",
     description: "butterfly flower looking ",
     instock: 1,
@@ -19,25 +43,25 @@ const images = [
   {
     name: "Starfish",
     instock: 2,
-    description: "starfish with pearls and stones .",
+    description: "You are a start, just the way you are.",
     src: ["./assets/37a.png", "./assets/37a.png"],
   },
   {
     name: "Rainbow star",
     instock: 1,
-    description: "rainbow star with sparkly finish.",
+    description: "Rainbow star with sparkly finish.",
     src: ["./assets/38b.png"],
   },
   {
     name: "Strawberry",
     instock: 1,
-    description: "summary strawberry with pink stones.",
+    description: "Summary strawberry with pink stones.",
     src: ["./assets/36a.png", "./assets/36b.png"],
   },
   {
     name: "Great green ",
     instock: 1,
-    description: "bright green color to lighten up your day.",
+    description: "Bright green color to lighten up your day.",
     src: ["./assets/39a.png", "./assets/39b.png"],
   },
 
@@ -53,24 +77,6 @@ const images = [
     description: "Ocean blue eyes, look into mine.",
     src: ["./assets/43a.png"],
   },
-  {
-    name: "cheers",
-    instock: 4,
-    description: "Save water, drink beer.",
-    src: ["./assets/beer1.png"],
-  },
-  {
-    name: "Merry Christmas",
-    instock: 4,
-    description: "so have yourself a merry little christmas.",
-    src: ["./assets/tree1.png"],
-  },
-  {
-    name: "Coo",
-    instock: 2,
-    description: "You are so coo.",
-    src: ["./assets/cow1.png"],
-  },
 ];
 
 console.log(images[0].src);
@@ -79,46 +85,42 @@ console.log(images[0].src);
 <Layout title="knitted love.">
   <main>
     <!-- cards with images -->
-    <ul role="list" class="cards">
-      {
-        images.map((image) => {
-          return (
-            <Card
-              name={image.name}
-              instock={image.instock}
-              description={image.description}
-              src={image.src[0]}
-            />
-          );
-        })
-      }
-    </ul>
+    <div>
+      <ul class="cards">
+        {
+          images.map((image) => {
+            return (
+              <Card
+                name={image.name}
+                instock={image.instock}
+                description={image.description}
+                src={image.src[0]}
+              />
+            );
+          })
+        }
+      </ul>
+      <div></div>
+    </div>
   </main>
+
+  <style>
+    main {
+      margin: auto;
+      padding: 1rem;
+      margin-top: 3rem;
+      width: auto;
+      max-width: calc(100% - 2rem);
+      background-color: #efd3c4;
+      font-size: 19px;
+      line-height: 1.6;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+      gap: 2rem;
+      padding: 0;
+    }
+  </style>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: auto;
-    max-width: calc(100% - 2rem);
-    background-color: #efd3c4;
-    font-size: 20px;
-    line-height: 1.6;
-  }
-
-  h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 1em;
-  }
-
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 2rem;
-    padding: 0;
-  }
-</style>

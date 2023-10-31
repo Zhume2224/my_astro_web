@@ -20,18 +20,28 @@ import NavigationLink from "../components/NavigationLink.astro";
   <body class="body">
     <!-- header and nav below -->
     <header class="header">
-      <Image src={logo} alt="weblogo knitted love." />
+      <div class="logo">
+        <Image src={logo} alt="weblogo knitted love." />
+      </div>
       <nav class="nav">
-        <NavigationLink href="/">Gallary</NavigationLink>
-        <NavigationLink href="/about">About</NavigationLink>
+        <div class="">
+          <NavigationLink href="/">
+            <p class="">Gallary</p>
+          </NavigationLink>
+          <NavigationLink href="/about">
+            <p class="">About</p>
+          </NavigationLink>
+        </div>
       </nav>
     </header>
     <!-- cards below -->
     <slot />
     <!-- footer below -->
     <footer class="px-4 md:px-0 my-12">
-      <div class="max-w-prose mx-auto pt-4 border-t border-t-neutral-300">
-        I DO IT FOR LOVE
+      <div class="max-w-prose mx-auto pt-4 border-t border-t-neutral-200">
+        <p id="bottom-text" class="text-center py-4 text-yellow-900">
+          I DO IT FOR LOVE
+        </p>
       </div>
     </footer>
   </body>
@@ -41,12 +51,21 @@ import NavigationLink from "../components/NavigationLink.astro";
   @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300;1,400&family=Roboto+Slab:wght@200;400;800&family=Rubik+Iso&display=swap");
 
   header {
-    font-size: 400;
-    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: end;
   }
+  nav {
+    display: flex;
+    justify-content: end;
+  }
+  /* to be continueed below */
   html {
     font-family: Fira Sans;
     background: #efd3c4;
     background-size: 224px;
+  }
+  bottom-text {
+    padding-left: 20px;
   }
 </style>

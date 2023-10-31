@@ -21,9 +21,8 @@ const isSamePath = isParentPath && hrefSegments.length === pathSegments.length;
 <a
   href={href}
   class:list={[
-    isParentPath ? "underline" : "",
-    isSamePath ? "text-white" : "text-mrpickles-text",
-    "decoration-mrpickles-accent decoration-2 font-light underline-offset-4 text-lg inline-block mr-4 hover:text-white hover:underline",
+    isSamePath ? "font-bold no-underline text-xl " : "",
+    "decoration-2 font-light text-yellow-900 text-lg inline-block mr-4 hover:text-yellow-700 ",
   ]}
 >
   <slot />
