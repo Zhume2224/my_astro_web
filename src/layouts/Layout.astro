@@ -21,24 +21,28 @@ import NavigationLink from "../components/NavigationLink.astro";
   </head>
 
   <body class="body">
-    <!-- header and nav below -->
-    <header class="header">
-      <div class="logo">
-        <Image src={logo} alt="weblogo knitted love." />
-      </div>
-      <nav class="nav">
-        <div class="">
-          <NavigationLink href="/">
-            <p class="">Gallary</p>
-          </NavigationLink>
-          <NavigationLink href="/about">
-            <p class="">About</p>
-          </NavigationLink>
+    <div class="container">
+      <!-- header and nav below -->
+      <header class="header">
+        <div class="logo">
+          <Image src={logo} alt="weblogo knitted love." />
         </div>
-      </nav>
-    </header>
-    <!-- cards below -->
-    <slot />
+        <nav class="nav">
+          <div class="">
+            <NavigationLink href="/">
+              <p class="">Gallary</p>
+            </NavigationLink>
+            <NavigationLink href="/about">
+              <p class="">About</p>
+            </NavigationLink>
+          </div>
+        </nav>
+      </header>
+      <!-- cards below -->
+      <div class="main">
+        <slot />
+      </div>
+    </div>
     <!-- footer below -->
     <footer class="px-4 md:px-0 my-12">
       <div class="max-w-prose mx-auto pt-4 border-t border-t-neutral-200">
@@ -52,6 +56,16 @@ import NavigationLink from "../components/NavigationLink.astro";
 
 <style is:global>
   @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300;1,400&family=Roboto+Slab:wght@200;400;800&family=Rubik+Iso&display=swap");
+
+  .container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }
+
+  .main {
+    overflow-y: auto;
+  }
 
   header {
     display: flex;
