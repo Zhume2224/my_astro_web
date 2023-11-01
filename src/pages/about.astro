@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="about">
-  <main>
+  <main class="about-main">
     <div class="font-extralight font-weight: 300;">
       <div class="qa-pair">
         <p>Q: Who am I?</p>
@@ -13,7 +13,7 @@ import Layout from "../layouts/Layout.astro";
           coding and knitting. I have noticed that the biggest similarity
           between coding and knitting is that no matter how beautiful it looks
           like, the back-end can be messy. Sorry about my dry humor, but I know
-          that with time and patience, they can both be a piece of art.
+          that with time and patience they can both be a piece of art.
         </p>
       </div>
 
@@ -26,28 +26,30 @@ import Layout from "../layouts/Layout.astro";
         </p>
       </div>
 
-      <!-- Repeat the above structure for each Q&A pair -->
+      <div class="qa-pair">
+        <p>Q: Can I buy your earrings ?</p>
+        <p>A: Yes! They are £12/each pair. Free UK delivery.</p>
+      </div>
 
       <div class="qa-pair">
-        <p>Q: Can I know more about you?</p>
+        <p>Q: How do I find you?</p>
         <p>
-          A: Of course.
+          A: My contact details:
           <div class="contact-group">
+            <p class="contact">Instagram: zhumeng1215</p>
+            <p class="contact">Email: zhume2224@outlook.com</p>
             <p class="contact">
-              My LinkedIn: <a
+              LinkedIn: <a
                 href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADy_UQ0BtKntH0mWZKQ7QTdaFH_Qag0dudk&keywords=zhu%20m%20scott&origin=RICH_QUERY_SUGGESTION&position=0&searchId=341bf772-bc1e-4c9d-8832-1f2ec6ef4e30&sid=%3AAv&spellCorrectionEnabled=false"
                 ><span class="underline inline">Zhu M Scott</span></a
               >
             </p>
-
             <p class="contact">
               YouTube: <a
                 href="https://www.youtube.com/channel/UCfQ43uCdxRQ785XS7c_6m5w"
                 ><span class="underline inline">Zhu M Scott</span></a
               >
             </p>
-            <p class="contact">My Instagram: zhumeng1215</p>
-            <p class="contact">Email: zhume2224@outlook.com</p>
           </div>
         </p>
       </div>
@@ -55,7 +57,7 @@ import Layout from "../layouts/Layout.astro";
   </main>
 
   <style>
-    main {
+    .about-main {
       font-size: 20px;
       padding-top: 5rem;
       padding-left: 2rem;
